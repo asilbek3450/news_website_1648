@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>News  HTML-5 Template </title>
+    <title>{% block title %} {% endblock title %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -33,7 +33,7 @@
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="assets/img/logo/logo.png" alt="">
+                <img src="/static/assets/img/logo/logo_news.png" alt="">
             </div>
         </div>
     </div>
@@ -49,13 +49,13 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left">
                                 <ul>     
-                                    <li class="title"><span class="flaticon-energy"></span> trending-title</li>
-                                    <li>Class property employ ancho red multi level mansion</li>
+                                    <li class="title"><span class="flaticon-energy"></span> So'nggi yangiliklar</li>
+                                    <li>O'zbekistonda iqtisodiy o'sish yangi bosqichga chiqmoqda</li>
                                 </ul>
                             </div>
                             <div class="header-info-right">
                                 <ul class="header-date">
-                                    <li><span class="flaticon-calendar"></span> +880166 253 232</li>
+                                    <li><span class="flaticon-calendar"></span> +998 90 123 45 67</li>
                                 </ul>
                             </div>
                         </div>
@@ -68,12 +68,12 @@
                         <!-- Logo -->
                         <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.html"><img src="/static/assets/img//logo/logo.png" alt="Sayt logotipi"></a>
                             </div>
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9">
                             <div class="header-banner f-right ">
-                                <img src="assets/img/gallery/header_card.png" alt="">
+                                <img src="/static/assets/img/gallery/header_card.png" alt="Reklama banneri">
                             </div>
                         </div>
                     </div>
@@ -85,16 +85,16 @@
                         <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
                             <!-- sticky -->
                             <div class="sticky-logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt="Sayt logotipi"></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
                                 <nav>                  
                                     <ul id="navigation">
-                                        <li><a href="index.html">Bosh sahifa</a></li>
-                                        <li><a href="about.html">Biz haqimizda</a></li>
-                                        <li><a href="categori.html">Yangiliklar</a></li>
-                                        <li><a href="contact.html">Aloqa</a></li>
+                                        <li><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                                        <li><a href="{% url 'about' %}">Biz haqimizda</a></li>
+                                        <li><a href="{% url 'news' %}">Yangiliklar</a></li>
+                                        <li><a href="{% url 'contact' %}">Aloqa</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -126,6 +126,7 @@
     <!-- Header End -->
 </header>
 
+
 {% block content %}
 
 {% endblock content %}
@@ -133,7 +134,7 @@
 
 
 <footer>
-    <!-- Footer Start-->
+    <!-- Footer Boshlanishi -->
     <div class="footer-main footer-bg">
         <div class="footer-area footer-padding">
             <div class="container">
@@ -141,15 +142,15 @@
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
                         <div class="single-footer-caption mb-50">
                             <div class="single-footer-caption mb-30">
-                                <!-- logo -->
+                                <!-- Logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html"><img src="/static/assets/img/logo/logo2_footer.png" alt="Sayt logotipi"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">Lorem ipsum dolor sit amet, nsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                                        <p class="info2">198 West 21th Street, Suite 721 New York,NY 10010</p>
-                                        <p class="info2">Phone: +95 (0) 123 456 789 Cell: +95 (0) 123 456 789</p>
+                                        <p class="info1">Biz sizga eng so‘nggi va ishonchli yangiliklarni taqdim etamiz.</p>
+                                        <p class="info2">Manzil: Toshkent, Amir Temur ko‘chasi, 12-uy</p>
+                                        <p class="info2">Telefon: +998 90 123 45 67</p>
                                     </div>
                                 </div>
                             </div>
@@ -158,36 +159,36 @@
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Popular post</h4>
+                                <h4>Ommabop yangiliklar</h4>
                             </div>
-                            <!-- Popular post -->
+                            <!-- Ommabop yangilik -->
                             <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
-                                    <img src="assets/img/gallery/footer_post1.png" alt="">
+                                    <img src="assets/img/gallery/footer_post1.png" alt="Yangilik rasmi">
                                 </div>
                                 <div class="whats-right-cap">
-                                    <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon  |  2 hours ago</p> 
+                                    <h4><a href="latest_news.html">So‘nggi siyosiy voqealar sharhi</a></h4>
+                                    <p>Muallif: Islom | 2 soat oldin</p> 
                                 </div>
                             </div>
-                            <!-- Popular post -->
+                            <!-- Ommabop yangilik -->
                             <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
-                                    <img src="assets/img/gallery/footer_post2.png" alt="">
+                                    <img src="assets/img/gallery/footer_post2.png" alt="Yangilik rasmi">
                                 </div>
                                 <div class="whats-right-cap">
-                                    <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon  |  2 hours ago</p> 
+                                    <h4><a href="latest_news.html">Sport olamidagi so‘nggi yangiliklar</a></h4>
+                                    <p>Muallif: Dilshod | 3 soat oldin</p> 
                                 </div>
                             </div>
-                            <!-- Popular post -->
+                            <!-- Ommabop yangilik -->
                             <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
-                                    <img src="assets/img/gallery/footer_post3.png" alt="">
+                                    <img src="assets/img/gallery/footer_post3.png" alt="Yangilik rasmi">
                                 </div>
                                 <div class="whats-right-cap">
-                                    <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon  |  2 hours ago</p> 
+                                    <h4><a href="latest_news.html">Texnologiya sohasidagi eng dolzarb voqealar</a></h4>
+                                    <p>Muallif: Ozodbek | 5 soat oldin</p> 
                                 </div>
                             </div>
                         </div>
@@ -195,23 +196,21 @@
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="banner">
-                                <img src="assets/img/gallery/body_card4.png" alt="">
+                                <img src="/static/assets/img/gallery/body_card4.png" alt="Reklama banneri">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- footer-bottom aera -->
+        <!-- Footer pastki qismi -->
         <div class="footer-bottom-area footer-bg">
             <div class="container">
                 <div class="footer-border">
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Barcha huquqlar himoyalangan | Sayt <a href="https://colorlib.com" target="_blank">Colorlib</a> tomonidan ishlab chiqilgan</p>
                             </div>
                         </div>
                     </div>
@@ -219,18 +218,19 @@
             </div>
         </div>
     </div>
-    <!-- Footer End-->
+    <!-- Footer Endi -->
 </footer>
-<!-- Search model Begin -->
+
+<!-- Qidiruv bo‘limi -->
 <div class="search-model-box">
     <div class="d-flex align-items-center h-100 justify-content-center">
         <div class="search-close-btn">+</div>
         <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Searching key.....">
+            <input type="text" id="search-input" placeholder="Qidirish...">
         </form>
     </div>
 </div>
-<!-- Search model end -->
+<!-- Qidiruv bo‘limi tugadi -->
 
 <!-- JS here -->
 <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
