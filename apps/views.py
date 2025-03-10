@@ -6,9 +6,13 @@ from django.shortcuts import get_object_or_404
 def home_page(request):
     yangiliklar = News.objects.all()
     kategoriyalar = Category.objects.all()
+    top_3_news = News.objects.all().order_by('-id')[:3]
+    trending_news = News.objects.all().order_by('-id')[:10]
     context = {
         'yangiliklar': yangiliklar,
-        'kategoriyalar': kategoriyalar
+        'kategoriyalar': kategoriyalar,
+        'top_three_news': top_3_news,
+        'trending_news': trending_news
     }
     return render(request, 'index.html', context)
 

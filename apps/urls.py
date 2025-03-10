@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from .views import home_page, about_page, news_page, news_detail, contact_page
 # endpoint -> urllar
 urlpatterns = [
